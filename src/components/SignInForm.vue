@@ -49,19 +49,20 @@
 <script>
 export default {
   name: 'SignInForm',
-  props: ['user'],
+  props: ['user', 'sign-in', 'create-user'],
   data: function() {
     return {
       email: '',
-      password: ''
+      password: '',
+      loading: false
     }
   },
   methods: {
-    signIn: function() {
-      this.$emit('signIn', this.email, this.password)
+    login: function() {
+      this.signIn(this.email, this.password)
     },
-    createUser: function() {
-      this.$emit('createUser', this.email, this.password)
+    register: function() {
+      this.createUser(this.email, this.password)
     }
   }
 }
