@@ -1,41 +1,13 @@
 <template>
-<div id="app">
-  <SignInForm v-bind:user="user" v-on:signIn="signIn" v-on:createUser="createUser"/>
-</div>
+  <div id="app">
+    <router-link :to="{ name: 'Home' }">Home</router-link>
+    <router-link :to="{ name: 'Sign In' }">Sign In</router-link>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import SignInForm from './components/SignInForm';
-import firebase from 'firebase';
-
 export default {
-  name: 'app',
-  data: function() {
-    return {
-      user: null
-    }
-  },
-  methods: {
-    signIn: function(email, password) {
-      alert(`Sign in with email as ${email} and password as ${password}!`);
-    },
-    createUser: function(email, password) {
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function() {
-      });
-    }
-  },
-  components: {
-    SignInForm
-  }
+  name: 'app'
 }
 </script>
-
-<style>
-#app {
-  text-align: center;
-  color: #2c3e50;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-</style>
