@@ -6,7 +6,8 @@ import {
   MdCard,
   MdField,
   MdButton,
-  MdProgress
+  MdProgress,
+  MdToolbar
 } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -14,6 +15,7 @@ import 'vue-material/dist/theme/default.css'
 Vue.use(MdCard)
 Vue.use(MdField)
 Vue.use(MdButton)
+Vue.use(MdToolbar)
 Vue.use(MdProgress)
 
 const config = {
