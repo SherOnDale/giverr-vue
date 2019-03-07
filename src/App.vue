@@ -5,11 +5,11 @@
       <router-link :to="{ name: 'Home' }">
         <md-button>Home</md-button>
       </router-link>
-      <router-link :to="{ name: 'Sign In' }">
+      <router-link :to="{ name: 'SignIn' }">
         <md-button class="md-primary">Sign in</md-button>
       </router-link>
     </md-toolbar>
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
