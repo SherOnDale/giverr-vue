@@ -32,7 +32,7 @@ export default {
         const loginResult = await API.auth.signIn(email, password)
 
         this.loading = false
-        this.$router.push('Home')
+        this.$router.replace('home')
 
         return loginResult
       } catch (e) {
@@ -48,6 +48,7 @@ export default {
         const registrationResult = await API.auth.createUser(email, password)
 
         this.loading = false
+        this.$router.replace('home')
 
         return registrationResult
       } catch (e) {
