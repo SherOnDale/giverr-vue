@@ -1,15 +1,15 @@
-import firebase from 'firebase';
+import firebase from 'firebase'
 
 const API = {
-	auth: {
-		signIn: (email, password) => {
-			return firebase.auth().signInWithEmailAndPassword(email, password);
-		},
+  auth: {
+    signIn: (email, password) => {
+      return firebase.auth().signInWithEmailAndPassword(email, password)
+    },
 
-		createUser: (email, password) => {
-			return firebase.auth().createUserWithEmailAndPassword(email, password);
-		}
-	}
+    createUser: (email, password) => {
+      return firebase.auth().createUserWithEmailAndPassword(email, password)
+    }
+  }
 }
 
-export default API;
+export default API
